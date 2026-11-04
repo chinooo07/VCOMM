@@ -1,0 +1,60 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at 50% 20%, #160327 0%, #0B0114 100%);
+    color: #F3F4F6;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.logo-gradient {
+    background: linear-gradient(130deg, #2A0845 0%, #D81B60 40%, #FF5722 75%, #FFC107 100%);
+}
+
+.btn-gradient {
+    background: linear-gradient(135deg, #D81B60 0%, #FF5722 100%);
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(135deg, #FF5722 0%, #FFC107 100%);
+}
+
+.tab-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.tab-btn.active {
+    background-color: #FFEBF2;
+    color: #2A0845;
+    font-weight: 700;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(90deg, #D81B60, #FF5722, #FFC107);
+    border-radius: 9999px;
+}
+
+.glass-card {
+    background: rgba(22, 3, 39, 0.88);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(216, 27, 96, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}

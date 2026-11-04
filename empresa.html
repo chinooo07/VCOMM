@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-COMM | Empresa y Estructura S.A.S.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vcomm: { purple: '#2A0845', dark: '#160327', deep: '#0B0114', magenta: '#D81B60', rose: '#E91E63', orange: '#FF5722', yellow: '#FFC107', pink: '#F8BBD0' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-vcomm-orange selection:text-white">
+
+    <canvas id="bg-canvas"></canvas>
+
+    <header class="sticky top-0 z-40 bg-vcomm-deep/90 backdrop-blur-md border-b border-vcomm-magenta/30 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between py-4 sm:h-20 gap-3">
+                <a href="proyecto.html" class="flex items-center gap-3">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl logo-gradient flex items-center justify-center text-white text-xl sm:text-2xl font-black shadow-lg shadow-vcomm-magenta/30">V</div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-white block leading-none">V-COMM</span>
+                        <span class="text-[10px] sm:text-xs font-semibold text-transparent bg-clip-text bg-gradient-to-r from-vcomm-magenta via-vcomm-orange to-vcomm-yellow tracking-wider uppercase">School Communication System</span>
+                    </div>
+                </a>
+
+                <nav class="flex flex-wrap justify-center items-center bg-vcomm-dark/80 p-1.5 rounded-2xl border border-vcomm-magenta/30 gap-1">
+                    <a href="proyecto.html" class="tab-btn px-3 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-medium text-gray-300">Proyecto</a>
+                    <a href="maqueta.html" class="tab-btn px-3 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-medium text-gray-300">Maqueta</a>
+                    <a href="empresa.html" class="tab-btn active px-3 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-medium text-gray-300">Empresa</a>
+                    <a href="contacto.html" class="tab-btn px-3 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-medium text-gray-300">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 flex-grow w-full relative z-10">
+        <section class="space-y-8 sm:space-y-10">
+            <div class="bg-gradient-to-r from-vcomm-purple via-vcomm-dark to-vcomm-deep p-6 sm:p-10 rounded-3xl text-white flex flex-col md:flex-row justify-between items-center gap-6 shadow-xl border border-vcomm-magenta/30">
+                <div>
+                    <span class="text-xs font-bold text-vcomm-yellow uppercase tracking-widest">Estructura Legal</span>
+                    <h2 class="text-2xl sm:text-3xl font-black mt-1">Sociedad por Acciones Simplificada (S.A.S.)</h2>
+                    <p class="text-gray-300 text-xs sm:text-sm mt-2 max-w-xl">Constituida formalmente por 5 socios fundadores con capital operativo equitativo, exentos de pasivos personales.</p>
+                </div>
+                <div class="bg-vcomm-deep/80 backdrop-blur-md p-4 rounded-2xl border border-vcomm-orange/40 text-center font-mono w-full md:w-auto">
+                    <span class="text-xs text-gray-400 block">Proyección Primer Año</span>
+                    <span class="text-xl sm:text-2xl font-black text-vcomm-yellow">$6.000.000 ARS</span>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="text-lg sm:text-xl font-bold text-white">Nómina Ejecutiva & Roles</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="glass-card p-5 rounded-2xl flex items-center gap-4 border border-vcomm-purple/40">
+                        <div class="w-12 h-12 rounded-full bg-vcomm-magenta/20 flex items-center justify-center font-bold text-vcomm-magenta border border-vcomm-magenta/30 shrink-0">IS</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm sm:text-base">Ivanna Solórzano</h4>
+                            <span class="text-xs font-semibold text-vcomm-pink block">CEO - Directora Ejecutiva</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl flex items-center gap-4 border border-vcomm-purple/40">
+                        <div class="w-12 h-12 rounded-full bg-vcomm-orange/20 flex items-center justify-center font-bold text-vcomm-orange border border-vcomm-orange/30 shrink-0">FR</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm sm:text-base">Facundo Rodríguez</h4>
+                            <span class="text-xs font-semibold text-vcomm-orange block">CTO - Director Técnico</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl flex items-center gap-4 border border-vcomm-purple/40">
+                        <div class="w-12 h-12 rounded-full bg-emerald-900/50 flex items-center justify-center font-bold text-emerald-300 border border-emerald-500/30 shrink-0">FL</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm sm:text-base">Franco Lucero</h4>
+                            <span class="text-xs font-semibold text-emerald-400 block">CFO - Director Financiero</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl flex items-center gap-4 border border-vcomm-purple/40">
+                        <div class="w-12 h-12 rounded-full bg-vcomm-yellow/20 flex items-center justify-center font-bold text-vcomm-yellow border border-vcomm-yellow/30 shrink-0">JM</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm sm:text-base">Juan Medina</h4>
+                            <span class="text-xs font-semibold text-vcomm-yellow block">CMO - Director Marketing</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl flex items-center gap-4 border border-vcomm-purple/40">
+                        <div class="w-12 h-12 rounded-full bg-blue-900/50 flex items-center justify-center font-bold text-blue-300 border border-blue-500/30 shrink-0">LR</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm sm:text-base">Lionel Rivera</h4>
+                            <span class="text-xs font-semibold text-blue-400 block">CISO - Ciberseguridad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-vcomm-deep/90 backdrop-blur-md border-t border-vcomm-purple/40 py-6 mt-10 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-400">
+            V-COMM System © 2026 — Proyecto de Difusión Escolar. Escuela Técnica N°19 D.E. 1 "Alejandro Volta".
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

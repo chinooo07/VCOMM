@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-COMM | Proyecto - Sistema de Difusión Escolar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vcomm: { purple: '#2A0845', dark: '#160327', deep: '#0B0114', magenta: '#D81B60', rose: '#E91E63', orange: '#FF5722', yellow: '#FFC107', pink: '#F8BBD0' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-vcomm-orange selection:text-white">
+
+    <canvas id="bg-canvas"></canvas>
+
+    <header class="sticky top-0 z-40 bg-vcomm-deep/90 backdrop-blur-md border-b border-vcomm-magenta/30 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between py-4 sm:h-20 gap-3">
+                <a href="proyecto.html" class="flex items-center gap-3">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl logo-gradient flex items-center justify-center text-white text-xl sm:text-2xl font-black shadow-lg shadow-vcomm-magenta/30">V</div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-white block leading-none">V-COMM</span>
+                        <span class="text-[10px] sm:text-xs font-semibold text-transparent bg-clip-text bg-gradient-to-r from-vcomm-magenta via-vcomm-orange to-vcomm-yellow tracking-wider uppercase">School Communication System</span>
+                    </div>
+                </a>
+
+                <nav class="flex flex-wrap justify-center items-center bg-vcomm-dark/80 p-1.5 rounded-2xl border border-vcomm-magenta/30 gap-1">
+                    <a href="proyecto.html" class="tab-btn active px-3 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-medium text-gray-300">Proyecto</a>
+                    <a href="maqueta.html" class="tab-btn px-3 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-medium text-gray-300">Maqueta</a>
+                    <a href="empresa.html" class="tab-btn px-3 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-medium text-gray-300">Empresa</a>
+                    <a href="contacto.html" class="tab-btn px-3 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-medium text-gray-300">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 flex-grow w-full relative z-10">
+        <section class="space-y-8 sm:space-y-12">
+            <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-vcomm-purple via-vcomm-dark to-vcomm-deep text-white p-6 sm:p-12 md:p-14 shadow-2xl border border-vcomm-magenta/30">
+                <div class="relative z-10 max-w-3xl space-y-4 sm:space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-vcomm-magenta/20 text-vcomm-pink text-[11px] sm:text-xs font-semibold border border-vcomm-magenta/40">
+                        <i class="fa-solid fa-graduation-cap text-vcomm-yellow"></i> Escuela Técnica N° 19 D.E. 1 "Alejandro Volta"
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tight">
+                        Modernización del Sistema de <span class="text-transparent bg-clip-text bg-gradient-to-r from-vcomm-pink via-vcomm-orange to-vcomm-yellow">Audio Escolar</span>
+                    </h1>
+                    <p class="text-gray-300 text-sm sm:text-base md:text-lg font-light leading-relaxed">
+                        Infraestructura optimizada de intercomunicación y megafonía escolar orientada a reducir la latencia informativa y potenciar la productividad en las escuelas de la República Argentina.
+                    </p>
+                    <div class="pt-2 flex flex-wrap gap-4">
+                        <a href="maqueta.html" class="btn-gradient text-white font-bold px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl shadow-lg transition-all hover:scale-105 active:scale-95 flex items-center gap-2 text-sm sm:text-base">
+                            <i class="fa-solid fa-microchip"></i> Probar Simulación Interactiva
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-2xl shadow-sm border-t-4 border-vcomm-magenta">
+                    <div class="w-12 h-12 rounded-xl bg-vcomm-magenta/20 flex items-center justify-center text-vcomm-magenta mb-4 text-xl">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Difusión Sectorizada</h3>
+                    <p class="text-sm text-gray-200 mt-2 font-medium">Permite seleccionar la emisión general a todo el colegio o dirigir avisos a aulas y sectores específicos.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl shadow-sm border-t-4 border-vcomm-orange">
+                    <div class="w-12 h-12 rounded-xl bg-vcomm-orange/20 flex items-center justify-center text-vcomm-orange mb-4 text-xl">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Baja Latencia</h3>
+                    <p class="text-sm text-gray-200 mt-2 font-medium">Reemplaza los avisos presenciales aula por aula, optimizando los tiempos del personal docente y preceptoría.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl shadow-sm border-t-4 border-vcomm-yellow">
+                    <div class="w-12 h-12 rounded-xl bg-vcomm-yellow/20 flex items-center justify-center text-vcomm-yellow mb-4 text-xl">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Producción a Medida</h3>
+                    <p class="text-sm text-gray-200 mt-2 font-medium">Diseño adaptado tras un relevamiento arquitectónico y croquis de distribución específico de cada institución.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-vcomm-deep/90 backdrop-blur-md border-t border-vcomm-purple/40 py-6 mt-10 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-400">
+            V-COMM System © 2026 — Proyecto de Difusión Escolar. Escuela Técnica N°19 D.E. 1 "Alejandro Volta".
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
